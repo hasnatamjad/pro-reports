@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      max-height: 100vh;
+    }
+
+    .main-box {
+      display: flex;
+      align-items: flex-start;
+      margin: 70px auto;
+      max-width: 1200px;
+      color: #000;
+    }
+    .welcome-page {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 96px;
+      padding: 32px;
+      justify-content: space-between;
+    }
+
+    .content-box {
+      display: flex;
+      flex-direction: column;
+      /* padding-right: 48px; */
+    }
+
+    .main-heading {
+      font-size: 44px;
+      line-height: 1.3;
+      margin-bottom: 22px;
+      /* text-transform: uppercase; */
+    }
+
+    .main-text {
+      font-size: 16px;
+      max-width: 90%;
+      margin-bottom: 86px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .formS {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      /* justify-content: space-between; */
+    }
+
+    .label-m {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .btn-S {
+      max-width: 75%;
+      /* margin-top: 16px; */
+    }
+
+    .btn-S,
+    .btn-S:link,
+    .btn-S:visited {
+      display: inline-block;
+      /* width: 100%; */
+      padding: 12px;
+      font-size: 16px;
+
+      background-color: #7048e8;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .welcome-footer {
+      margin-top: 112px;
+    }
+  </style>
+  <body>
+    <div class="main-box">
+      <div class="welcome-page">
+        <!-- content box -->
+        <div class="content-box">
+          <h2 class="main-heading">
+            Project updates with <br />
+            Pro Reports
+          </h2>
+          <div class="main-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
+            aspernatur expedita, harum excepturi modi, quia sapiente doloribus
+            dicta consequatur nobis numquam reiciendis
+          </div>
+          <div class="btns">
+            <form id="signup" action="signup.html" class="formS">
+              <label class="label-m">New User? Sign up here</label>
+              <button id="signup" class="btn-S">Sign up</button>
+            </form>
+            <form id="login" action="sign-In.html" class="formS">
+              <label class="label-m">Already User? Login here</label>
+
+              <button class="btn-S">Login</button>
+            </form>
+          </div>
+        </div>
+        <img src="main-bg.png" alt="main-image" />
+      </div>
+    </div>
+    <footer class="welcome-footer">
+      <p>
+        Built by
+        <a href="https://www.linkedin.com/in/hasnatamjad/" target="_blank"
+          >HASNATAMJAD</a
+        >
+        for his personal portfolio. Copyright &#169; by Hasnat Amjad
+      </p>
+    </footer>
+  </body>
+</html>

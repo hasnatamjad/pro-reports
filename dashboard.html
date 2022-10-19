@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre Reports Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+
+        display: grid;
+        grid-template-columns: 95px 390px 1fr 240px;
+        grid-template-rows: 80px 1fr;
+      }
+
+      nav,
+      section,
+      main,
+      aside {
+        padding-top: 24px;
+      }
+
+      nav {
+        background-color: #343a40;
+        color: white;
+        grid-row: 1 / -1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 24px;
+      }
+
+      nav p {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      menu {
+        background-color: #7048e8;
+        grid-column: 2 / -1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+
+      menu button {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #5f3dc4;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+      }
+
+      .trash-btn {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+
+      nav .sign-out {
+        display: inline-block;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background-color: #ff2;
+        padding: 2px;
+        font-weight: 600;
+
+        cursor: pointer;
+      }
+
+      section {
+        background-color: #e9ecef;
+        padding: 40px;
+
+        /* How elements that don't fit into container appear */
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .email {
+        background-color: #adb5bd;
+        height: 68px;
+        flex-shrink: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      aside {
+        background-color: #e9ecef;
+      }
+
+      /* SIGNOUT WINDOW STYLING */
+      .hidden {
+        display: none;
+      }
+
+      .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* width: 45%; */
+        background-color: white;
+        padding: 24px 48px 24px 48px;
+        /* border-radius: 5px; */
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 5;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 14px;
+        font-size: 22px;
+        color: #333;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      .modal-heading {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 48px;
+      }
+
+      .logout-btn {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 96px;
+      }
+
+      .link1 {
+        font-size: 18px;
+        text-decoration: none;
+        border: none;
+        color: #fff;
+        background-color: #7048e8;
+        padding: 6px 24px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <p>User</p>
+      <button type="button" class="sign-out show-modal">Sign Out</button>
+    </nav>
+
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Teams</button>
+      <button>Unchecked</button>
+      <button class="trash-btn">Trash</button>
+    </menu>
+    <section>
+      <div class="email">New Task!</div>
+      <div class="email">Team 1</div>
+      <div class="email">New Task!</div>
+      <div class="email">Report 3</div>
+      <div class="email">Report 7</div>
+      <div class="email">Report 1</div>
+      <div class="email">Report 4</div>
+      <div class="email">New Task!</div>
+      <div class="email">Team 3</div>
+      <div class="email">Team 10</div>
+    </section>
+    <main>Today Tasks</main>
+    <aside>New project</aside>
+
+    <!-- SIGN OUT WINDOW -->
+    <div class="modal hidden">
+      <button class="close-modal close-btn">&times;</button>
+      <h1 class="modal-heading">Do you really want to Exit?</h1>
+      <div class="logout-btn">
+        <a href="index.html" class="link1 yes-btn">Yes</a>
+        <button type="submit" class="link1 no-btn">No!</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

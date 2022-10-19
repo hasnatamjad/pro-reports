@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 10px auto 0 auto;
+  /* overflow: hidden; */
+  box-shadow: 0 4px 8px #888888;
+}
+
+.image {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(112, 72, 232, 0.35),
+      rgba(112, 72, 232, 0.35)
+    ),
+    url(./b&w\ sign\ up\ form.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+.form-section {
+  background-color: #6741d9;
+  color: #fff;
+  padding: 28px 36px 28px 36px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 1.8rem;
+}
+
+h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.form-section p {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.sup {
+  color: #fff;
+}
+
+.input-sup {
+  background-color: #f8f9fa;
+  color: #222;
+  font-weight: 500;
+}
+
+.btn-form {
+  background-color: #382474;
+}
+
+.btn-form:hover,
+.btn-form:active {
+  background-color: #fff;
+  color: #432b8b;
+}
+
+.sign-in {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.sign-in p {
+  font-family: inherit;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.sign-link {
+  text-decoration: none;
+  color: #043224;
+  font-weight: 600;
+}
+
+/* LOGIN STYLING */
+h2 {
+  font-family: inherit;
+  color: #7048e8;
+  font-size: 28px;
+}
+
+.sign-in-box {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 24px 24px;
+  margin: 0 auto;
+
+  background-color: #fff;
+  box-shadow: 0 4px 8px #888888;
+  margin-bottom: 0;
+}
+
+.s-in {
+  color: #868e96;
+  box-shadow: inset 0 1px 2px rgba(231, 230, 230, 0.1);
+}
+
+.sin {
+  background-color: #e9ecef;
+  color: #000;
+  font-size: 14px;
+}
+
+.checkbox-label {
+  font-family: inherit;
+  color: #333;
+}
+
+hr {
+  border-top: 1px solid #868e96;
+  margin-top: 5px;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-ps {
+  font-size: 12px;
+  margin-top: 5px;
+  align-self: end;
+  color: #343a40;
+}
+.f-ps a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #343a40;
+  /* font-weight: 600; */
+}
+
+.new-user {
+  display: flex;
+  color: #000;
+
+  justify-content: center;
+  font-weight: 600;
+}
+
+.new-user-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.login-btn {
+  background-color: #432b8b;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-In form</title>
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #f3f0ff;
+        max-height: 100vh;
+      }
+
+      .sign-in-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .new-user-link {
+        padding-bottom: 2px;
+        border-bottom: 1px solid #999;
+      }
+
+      .login-header {
+        margin-bottom: 56px;
+      }
+      .login-footer p {
+        margin-top: 72px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="login-header">
+      <a href="index.html" class="logo-link">Pro-Reports</a>
+    </header>
+    <form action="dashboard.html" method="url" class="sign-in-form">
+      <div class="sign-in-box">
+        <h2>Log in to Dashboard</h2>
+        <div>
+          <label for="email" class="label s-in"><b>Email Address</b></label>
+          <input
+            type="email"
+            class="input sin"
+            name="email"
+            id="uname"
+            required
+          />
+        </div>
+
+        <div class="password-field">
+          <label for="psw" class="label s-in"><b>Password</b></label>
+          <input type="password" class="input sin" name="psw" required />
+          <div class="f-ps">Forgot <a href="#">password?</a></div>
+        </div>
+
+        <button type="submit" class="btn login-btn">Login</button>
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            unchecked="uncheck"
+            name="remember"
+            class="checkbox"
+          />
+          Remember me
+        </label>
+        <!-- <hr /> -->
+        <div class="new-user">
+          <p>
+            New User?
+            <a href="signup.html" class="new-user-link">Signup</a>
+          </p>
+        </div>
+      </div>
+    </form>
+    <footer class="login-footer">
+      <p class="login-copywrite">
+        Built by
+        <a href="https://www.linkedin.com/in/hasnatamjad/" target="_blank"
+          >HASNATAMJAD</a
+        >
+        for his personal portfolio. Copyright &#169; by Hasnat Amjad
+      </p>
+    </footer>
+  </body>
+</html>
